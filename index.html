@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitMeals — Find Restaurant Meals That Fit Your Macros</title>
+  <meta name="description" content="FitMeals helps you find restaurant meals that fit your macros. Scored to your personal targets, not generic healthy labels. Download free on iOS and Android.">
+  <meta property="og:title" content="FitMeals — Stop Guessing. Start Hitting Your Macro Goals.">
+  <meta property="og:description" content="Find restaurant meals that actually fit your macros — scored to your personal targets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fitmeals.app">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav-container">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-icon">FM</span>
+        <span class="nav-logo-text">FitMeals</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="/" class="nav-link active">Home</a>
+        <a href="/support.html" class="nav-link">Support</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+      </nav>
+      <a href="#download" class="nav-cta btn btn--primary btn--sm">Download Free</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            <span class="hero-word animate-on-load" data-delay="100">Stop</span>
+            <span class="hero-word animate-on-load" data-delay="200">guessing.</span>
+            <br>
+            <span class="hero-word animate-on-load" data-delay="300">Start</span>
+            <span class="hero-word animate-on-load" data-delay="400">hitting</span>
+            <span class="hero-word animate-on-load" data-delay="500">your</span>
+            <br class="mobile-break">
+            <span class="hero-word hero-word--accent animate-on-load" data-delay="600">macro&nbsp;goals.</span>
+          </h1>
+          <p class="hero-sub animate-on-load" data-delay="700">
+            Find restaurant meals that actually fit your macros — scored to your personal targets, not generic "healthy" labels.
+          </p>
+          <p class="hero-body animate-on-load" data-delay="800">
+            FitMeals shows you exactly what to order at popular restaurants to stay on track. Browse macro-scored meals, build custom orders with real-time tracking, and discover off-menu hacks — all designed by a certified nutrition coach.
+          </p>
+          <div class="hero-cta animate-on-load" data-delay="900">
+            <a href="https://apps.apple.com/us/app/fit-meals-restaurant-macros/id6757499139" class="btn btn--primary btn--lg store-btn">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              App Store
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.mdmedia.fitmeals&hl=en_US" class="btn btn--outline btn--lg store-btn">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M3.18 23.04L14.46 12 3.18.96c-.36.28-.58.7-.58 1.16v19.76c0 .46.22.88.58 1.16zm1.42.56l12.7-7.33-2.82-2.82L4.6 23.6zm14.06-8.2l3.1-1.79c.56-.32.56-1.1 0-1.42l-3.1-1.79-3.14 3.14 3.14 2.86zM4.6.4L15.48 10.45l2.82-2.82L5.6-.04 4.6.4z"/></svg>
+              Google Play
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual animate-on-load" data-delay="500">
+          <div class="hero-phone">
+            <div class="hero-phone-screen">
+              <div class="hero-phone-header">
+                <span class="hero-phone-app-name">FitMeals</span>
+                <span class="hero-phone-score">98% match</span>
+              </div>
+              <div class="hero-phone-card">
+                <div class="hero-phone-meal-name">Grilled Nuggets Meal</div>
+                <div class="hero-phone-macros">
+                  <div class="hero-phone-macro">
+                    <span class="macro-val">675</span>
+                    <span class="macro-label">Cal</span>
+                  </div>
+                  <div class="hero-phone-macro">
+                    <span class="macro-val" style="color:#2e7d32">58g</span>
+                    <span class="macro-label">Protein</span>
+                  </div>
+                  <div class="hero-phone-macro">
+                    <span class="macro-val" style="color:#f59e0b">31g</span>
+                    <span class="macro-label">Carbs</span>
+                  </div>
+                  <div class="hero-phone-macro">
+                    <span class="macro-val" style="color:#a03bea">38g</span>
+                    <span class="macro-label">Fat</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-phone-card hero-phone-card--sm">
+                <div class="hero-phone-meal-name">Chick-fil-A Wrap</div>
+                <div class="hero-phone-score-bar">
+                  <div class="hero-phone-score-fill" style="width: 87%"></div>
+                </div>
+              </div>
+              <div class="hero-phone-card hero-phone-card--sm">
+                <div class="hero-phone-meal-name">Cava Grain Bowl</div>
+                <div class="hero-phone-score-bar">
+                  <div class="hero-phone-score-fill" style="width: 79%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-floating-card hero-floating-card--1">
+            <span class="floating-emoji">🎯</span>
+            <span>98% match</span>
+          </div>
+          <div class="hero-floating-card hero-floating-card--2">
+            <span class="floating-emoji">💪</span>
+            <span>58g Protein</span>
+          </div>
+          <div class="hero-floating-card hero-floating-card--3">
+            <span class="floating-emoji">✅</span>
+            <span>Fits your macros!</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator animate-on-load" data-delay="1200">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Social Proof -->
+    <section class="social-proof" id="socialProof">
+      <div class="container">
+        <div class="social-proof-inner reveal-up">
+          <div class="social-proof-logo">
+            <span class="social-proof-jttf">Joy to the Food</span>
+          </div>
+          <div class="social-proof-divider"></div>
+          <p class="social-proof-text">
+            From the creators of <strong>Joy to the Food</strong> — trusted by
+            <span class="counter-wrapper">
+              <span class="counter" data-target="400" data-suffix="K+">0</span>
+            </span>
+            followers for macro-friendly eating.
+          </p>
+          <div class="social-proof-divider"></div>
+          <div class="social-proof-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Certified Nutrition Coach
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: The Problem -->
+    <section class="problem" id="problem">
+      <div class="container">
+        <div class="problem-content">
+          <h2 class="section-heading reveal-up">
+            You're tracking your macros.<br>
+            <span class="text-accent">Eating out shouldn't wreck your progress.</span>
+          </h2>
+          <div class="problem-body">
+            <p class="problem-intro reveal-up">
+              You're disciplined. You're hitting your targets at home. But then you're at a restaurant, scrolling through a 47-item menu with no macro info in sight.
+            </p>
+            <div class="problem-pain-points">
+              <div class="pain-point reveal-left" data-delay="0">
+                <span class="pain-icon">😤</span>
+                <p>You don't want to spend 15 minutes digging through nutrition PDFs.</p>
+              </div>
+              <div class="pain-point reveal-left" data-delay="150">
+                <span class="pain-icon">😰</span>
+                <p>You don't want to guess and risk blowing your progress.</p>
+              </div>
+              <div class="pain-point reveal-left" data-delay="300">
+                <span class="pain-icon">😤</span>
+                <p>And you definitely don't want to skip the meal and show up hangry.</p>
+              </div>
+            </div>
+          </div>
+          <div class="problem-transition reveal-up">
+            <div class="transition-line"></div>
+            <p class="transition-text">
+              There's a better way. Just tell FitMeals your macro targets, and we'll show you <strong>exactly what to order</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: How It Works -->
+    <section class="how-it-works" id="howItWorks">
+      <div class="container">
+        <h2 class="section-heading text-center reveal-up">
+          Three steps. <span class="text-accent">That's it.</span>
+        </h2>
+        <div class="steps">
+          <div class="step reveal-up" data-delay="0">
+            <div class="step-number"><span>1</span></div>
+            <div class="step-icon">🎯</div>
+            <h3 class="step-title">Set your targets</h3>
+            <p class="step-body">Enter your meal macro goals for calories, protein, carbs, fat, and fiber. Choose your dietary preferences — high-protein, low-carb, dairy-free, gluten-free, and more.</p>
+          </div>
+          <div class="step-connector reveal-up" data-delay="100">
+            <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h50m-8-8l8 8-8 8" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="step reveal-up" data-delay="200">
+            <div class="step-number"><span>2</span></div>
+            <div class="step-icon">🍽️</div>
+            <h3 class="step-title">Find meals that fit</h3>
+            <p class="step-body">Browse macro-scored meals from popular restaurants, or open the map to find options near you. Every meal is scored against your personal targets so the best options rise to the top.</p>
+          </div>
+          <div class="step-connector reveal-up" data-delay="300">
+            <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h50m-8-8l8 8-8 8" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="step reveal-up" data-delay="400">
+            <div class="step-number"><span>3</span></div>
+            <div class="step-icon">✅</div>
+            <h3 class="step-title">Order with confidence</h3>
+            <p class="step-body">Found your meal? Save it for next time. Walk in, order exactly what's on the screen, and hit your macros without thinking twice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Smart Build -->
+    <section class="feature feature--smart-build" id="smartBuild">
+      <div class="container feature-grid">
+        <div class="feature-content reveal-left">
+          <div class="feature-label">AI-Powered</div>
+          <h2 class="section-heading">
+            Smart Build: Your perfect meal, <span class="text-accent">built automatically.</span>
+          </h2>
+          <p class="feature-body">
+            Tell us your macro targets and Smart Build generates an optimized custom meal at your favorite restaurant — dialed in for your protein, carb, fat, and fiber goals.
+          </p>
+          <p class="feature-highlight">
+            No scrolling. No math. Just a meal that fits, built in seconds.
+          </p>
+          <div class="feature-restaurants">
+            <span class="restaurant-tag">Chipotle</span>
+            <span class="restaurant-tag">Chick-fil-A</span>
+            <span class="restaurant-tag">Cava</span>
+            <span class="restaurant-tag">Qdoba</span>
+            <span class="restaurant-tag">Panda Express</span>
+            <span class="restaurant-tag">+ more</span>
+          </div>
+        </div>
+        <div class="feature-visual reveal-right">
+          <div class="feature-mockup feature-mockup--smart-build">
+            <div class="mockup-header-bar" style="background: #441500">
+              <span class="mockup-back-arrow">←</span>
+              <span class="mockup-header-title">Chipotle Builder</span>
+              <span class="mockup-home-icon">⌂</span>
+            </div>
+            <div class="sb-section-label">THIS MEAL VS YOUR TARGETS</div>
+            <div class="sb-macro-rings">
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 0; --ring-color: #333">
+                  <span class="sb-ring-val">0</span>
+                  <span class="sb-ring-max">/800</span>
+                </div>
+                <span class="sb-ring-label">CAL</span>
+              </div>
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 0; --ring-color: #2e7d32">
+                  <span class="sb-ring-val">0</span>
+                  <span class="sb-ring-max">/51g</span>
+                </div>
+                <span class="sb-ring-label">PROTEIN</span>
+              </div>
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 0; --ring-color: #f59e0b">
+                  <span class="sb-ring-val">0</span>
+                  <span class="sb-ring-max">/60g</span>
+                </div>
+                <span class="sb-ring-label">CARBS</span>
+              </div>
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 0; --ring-color: #a03bea">
+                  <span class="sb-ring-val">0</span>
+                  <span class="sb-ring-max">/30g</span>
+                </div>
+                <span class="sb-ring-label">FAT</span>
+              </div>
+            </div>
+            <div class="sb-smart-btn">
+              <span class="sb-smart-icon">✨</span>
+              <div class="sb-smart-text">
+                <strong>Smart Build My Meal</strong>
+                <span>Auto-picks the best base &amp; ingredients for your macros</span>
+              </div>
+              <span class="sb-smart-arrow">›</span>
+            </div>
+            <div class="sb-or-text">or select a base to manual build</div>
+            <div class="sb-base-options">
+              <div class="sb-base-row"><span class="sb-radio"></span><span>Bowl</span><span class="sb-cal">+0 cal</span></div>
+              <div class="sb-base-row"><span class="sb-radio"></span><span>Burrito</span><span class="sb-cal">+320 cal</span></div>
+              <div class="sb-base-row"><span class="sb-radio"></span><span>Salad</span><span class="sb-cal">+5 cal</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Interactive Meal Builders -->
+    <section class="feature feature--builders feature--reverse" id="builders">
+      <div class="container feature-grid">
+        <div class="feature-content reveal-right">
+          <div class="feature-label">Interactive</div>
+          <h2 class="section-heading">
+            Build your own meal. <span class="text-accent">Watch your macros update in real time.</span>
+          </h2>
+          <p class="feature-body">
+            Use our interactive meal builders to customize your order at popular restaurants. Build a bowl from scratch, put together a combo meal with your choice of entree, side, and sauce — all while seeing exactly how each choice affects your macros.
+          </p>
+          <p class="feature-highlight">
+            It's like building your meal in the app before you even walk in the door.
+          </p>
+          <div class="feature-restaurants">
+            <span class="restaurant-tag">Chipotle</span>
+            <span class="restaurant-tag">Chick-fil-A</span>
+            <span class="restaurant-tag">Cava</span>
+            <span class="restaurant-tag">Qdoba</span>
+            <span class="restaurant-tag">Panda Express</span>
+          </div>
+        </div>
+        <div class="feature-visual reveal-left">
+          <div class="feature-mockup feature-mockup--builder">
+            <div class="mockup-header-bar mockup-header-bar--red">
+              <span class="mockup-back-arrow" style="color: white">←</span>
+              <span class="mockup-header-title" style="color: white">Chick-Fil-A Builder</span>
+              <span class="mockup-home-icon" style="color: white">⌂</span>
+            </div>
+            <div class="bld-match-row">
+              <span class="sb-section-label">THIS MEAL VS YOUR TARGETS</span>
+              <span class="bld-match-badge">100% Great match! ✓</span>
+            </div>
+            <div class="sb-macro-rings">
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 53; --ring-color: #333">
+                  <span class="sb-ring-val">595</span>
+                  <span class="sb-ring-max">/750</span>
+                </div>
+                <span class="sb-ring-label">CAL</span>
+              </div>
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 100; --ring-color: #2e7d32">
+                  <span class="sb-ring-val">51</span>
+                  <span class="sb-ring-max">/47g</span>
+                </div>
+                <span class="sb-ring-label">PROTEIN</span>
+              </div>
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 94; --ring-color: #f59e0b">
+                  <span class="sb-ring-val">44</span>
+                  <span class="sb-ring-max">/47g</span>
+                </div>
+                <span class="sb-ring-label">CARBS</span>
+              </div>
+              <div class="sb-ring-item">
+                <div class="sb-ring" style="--ring-progress: 29; --ring-color: #a03bea">
+                  <span class="sb-ring-val">23</span>
+                  <span class="sb-ring-max">/80g</span>
+                </div>
+                <span class="sb-ring-label">FAT</span>
+              </div>
+            </div>
+            <div class="bld-tabs">
+              <span class="bld-tab bld-tab--active">Entree ●</span>
+              <span class="bld-tab">Side ●</span>
+              <span class="bld-tab">Sauce ●</span>
+            </div>
+            <div class="bld-entree-list">
+              <div class="bld-entree bld-entree--selected">
+                <span class="bld-check">✓</span>
+                <div class="bld-entree-info">
+                  <strong>Nuggets</strong>
+                  <span class="bld-entree-meta">380cal · 40g P</span>
+                </div>
+              </div>
+              <div class="bld-entree">
+                <span class="bld-check-empty"></span>
+                <div class="bld-entree-info">
+                  <strong>Grilled Nuggets</strong>
+                  <span class="bld-entree-meta">130cal · 25g P</span>
+                </div>
+              </div>
+              <div class="bld-entree">
+                <span class="bld-check-empty"></span>
+                <div class="bld-entree-info">
+                  <strong>Chick-n-Strips</strong>
+                  <span class="bld-entree-meta">310cal · 29g P</span>
+                </div>
+              </div>
+            </div>
+            <div class="bld-meal-chips">
+              <span class="sb-section-label">YOUR MEAL (3 ITEMS)</span>
+              <div class="bld-chips">
+                <span class="bld-chip">Zesty Buffalo ×</span>
+                <span class="bld-chip">Nuggets (12ct) ×</span>
+                <span class="bld-chip">Chicken Noodle Soup ×</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Macro Scoring -->
+    <section class="feature feature--scoring" id="scoring">
+      <div class="container feature-grid">
+        <div class="feature-content reveal-left">
+          <div class="feature-label">Personalized</div>
+          <h2 class="section-heading">
+            Every meal scored to <span class="text-accent">your goals.</span> Not someone else's.
+          </h2>
+          <p class="feature-body">
+            FitMeals doesn't just list nutrition info. It scores every meal against your personal macro targets — so a meal that's perfect for someone eating 900 calories shows up differently than one for someone eating 500.
+          </p>
+          <p class="feature-highlight">
+            Higher score = closer to your targets. It's that simple.
+          </p>
+          <p class="feature-body">
+            No generic "healthy" labels. No one-size-fits-all recommendations. Just meals ranked by how well they fit <em>you</em>.
+          </p>
+        </div>
+        <div class="feature-visual reveal-right">
+          <div class="feature-mockup feature-mockup--scoring">
+            <div class="mockup-header-bar">
+              <span class="mockup-back-arrow">←</span>
+              <span class="mockup-header-title">Chick-fil-A meals</span>
+              <span class="mockup-home-icon">⚙</span>
+            </div>
+            <div class="scr-tabs">
+              <span class="scr-tab scr-tab--active">All</span>
+              <span class="scr-tab">Breakfast</span>
+              <span class="scr-tab">Lunch/dinner</span>
+            </div>
+            <div class="scr-meal-cards">
+              <div class="scr-meal-card">
+                <div class="scr-meal-img" style="background: #e8e0d0">🍗</div>
+                <div class="scr-meal-info">
+                  <div class="scr-meal-top">
+                    <span class="scr-restaurant-tag">Chick-fil-A</span>
+                    <span class="scr-match">100% match</span>
+                  </div>
+                  <strong class="scr-meal-name">Grilled Nuggets with Mac and C...</strong>
+                  <div class="scr-segmented-bar">
+                    <div class="scr-seg scr-seg--protein" style="width:46%"></div>
+                    <div class="scr-seg scr-seg--carb" style="width:25%"></div>
+                    <div class="scr-seg scr-seg--fat" style="width:29%"></div>
+                  </div>
+                  <div class="scr-macro-nums">
+                    <span><strong>675</strong> Cals</span>
+                    <span style="color:#2e7d32"><strong>58g</strong> Protein</span>
+                    <span style="color:#f59e0b"><strong>31g</strong> Carb</span>
+                    <span style="color:#a03bea"><strong>36g</strong> Fat</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scr-meal-card">
+                <div class="scr-meal-img" style="background: #d8e8d0">🥗</div>
+                <div class="scr-meal-info">
+                  <div class="scr-meal-top">
+                    <span class="scr-restaurant-tag">Chick-fil-A</span>
+                    <span class="scr-match">99% match</span>
+                  </div>
+                  <strong class="scr-meal-name">Custom Cool Wrap and Kale Cr...</strong>
+                  <div class="scr-segmented-bar">
+                    <div class="scr-seg scr-seg--protein" style="width:40%"></div>
+                    <div class="scr-seg scr-seg--carb" style="width:37%"></div>
+                    <div class="scr-seg scr-seg--fat" style="width:23%"></div>
+                  </div>
+                  <div class="scr-macro-nums">
+                    <span><strong>545</strong> Cals</span>
+                    <span style="color:#2e7d32"><strong>46g</strong> Protein</span>
+                    <span style="color:#f59e0b"><strong>43g</strong> Carb</span>
+                    <span style="color:#a03bea"><strong>27g</strong> Fat</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: Map Search -->
+    <section class="feature feature--map feature--reverse" id="mapSearch">
+      <div class="container feature-grid">
+        <div class="feature-content reveal-right">
+          <div class="feature-label">Location-Based</div>
+          <h2 class="section-heading">
+            Find macro-friendly meals <span class="text-accent">near you.</span>
+          </h2>
+          <p class="feature-body">
+            Open the map, see restaurants around you, and instantly browse meals that match your targets — sorted by score, not guesswork.
+          </p>
+          <p class="feature-body">
+            Whether you're traveling, running errands, or just don't feel like cooking, FitMeals helps you find the best option nearby in seconds.
+          </p>
+        </div>
+        <div class="feature-visual reveal-left">
+          <img src="images/map-phone.webp" alt="FitMeals map view showing macro-friendly restaurant meals near you in Austin with match scores" class="feature-screenshot feature-screenshot--no-bg" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: Off-Menu Hacks -->
+    <section class="feature feature--hacks" id="hacks">
+      <div class="container feature-grid">
+        <div class="feature-content reveal-left">
+          <div class="feature-label">Exclusive</div>
+          <h2 class="section-heading">
+            Off-menu hacks <span class="text-accent">you won't find anywhere else.</span>
+          </h2>
+          <p class="feature-body">
+            Our database includes custom ordering hacks designed by a certified nutrition coach to maximize your macros at popular chains. These aren't on the menu board — they're built specifically for people who take their nutrition seriously.
+          </p>
+          <p class="feature-highlight">
+            Think: higher-protein bowls, lower-carb swaps, and creative combos that hit your targets better than anything on the standard menu.
+          </p>
+        </div>
+        <div class="feature-visual reveal-right">
+          <div class="feature-mockup feature-mockup--hacks">
+            <div class="hack-top-row">
+              <span class="hack-restaurant-tag" style="background:#c0392b">Chick-fil-A</span>
+              <span class="scr-match">99% match</span>
+              <span class="hack-save-btn">❤️ Save</span>
+            </div>
+            <h3 class="hack-meal-name">Custom Cool Wrap with Mac and Cheese</h3>
+            <div class="hack-macro-section">
+              <div class="hack-macro-header">
+                <strong class="hack-section-title">Macro Breakdown</strong>
+                <span class="hack-info-badge">ℹ macro info</span>
+              </div>
+              <div class="hack-donut-row">
+                <div class="hack-donut-item">
+                  <div class="hack-donut" style="--donut-pct: 28; --donut-color: #2e7d32">
+                    <span>28%</span>
+                  </div>
+                  <span class="hack-donut-val">62g</span>
+                  <span class="hack-donut-label">Protein</span>
+                </div>
+                <div class="hack-donut-item">
+                  <div class="hack-donut" style="--donut-pct: 26; --donut-color: #f59e0b">
+                    <span>26%</span>
+                  </div>
+                  <span class="hack-donut-val">58g</span>
+                  <span class="hack-donut-label">Carbs</span>
+                </div>
+                <div class="hack-donut-item">
+                  <div class="hack-donut" style="--donut-pct: 45; --donut-color: #a03bea">
+                    <span>45%</span>
+                  </div>
+                  <span class="hack-donut-val">44g</span>
+                  <span class="hack-donut-label">Fat</span>
+                </div>
+              </div>
+              <div class="hack-cal-row">
+                <span class="hack-cal-badge">825 cal</span>
+                <span class="hack-cal-note">total per serving</span>
+              </div>
+            </div>
+            <div class="hack-micro-row">
+              <div class="hack-micro"><span class="hack-micro-label">Fiber</span><strong>16g</strong></div>
+              <div class="hack-micro"><span class="hack-micro-label">Sodium</span><strong>2660mg</strong></div>
+              <div class="hack-micro"><span class="hack-micro-label">Sugar</span><strong>8g</strong></div>
+            </div>
+            <div class="hack-tags">
+              <span class="hack-tag">high-protein</span>
+              <span class="hack-tag">high-fiber</span>
+            </div>
+            <div class="hack-order-section">
+              <strong>📋 Description/How to Order</strong>
+              <p>Order a combo meal with a Chick-fil-A Cool Wrap and mac and cheese. Order it with zesty buffalo sauce instead of avocado lime dressing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: Dietary Preferences -->
+    <section class="feature feature--diet feature--reverse" id="diet">
+      <div class="container feature-grid">
+        <div class="feature-content reveal-right">
+          <div class="feature-label">Customizable</div>
+          <h2 class="section-heading">
+            Built for your diet. <span class="text-accent">Whatever it is.</span>
+          </h2>
+          <p class="feature-body">
+            Set your dietary preferences once and FitMeals automatically boosts meals that match and filters out ones that don't. Preferences fine-tune your scores. Restrictions remove meals entirely. You stay in control.
+          </p>
+        </div>
+        <div class="feature-visual reveal-left">
+          <div class="feature-mockup feature-mockup--diet">
+            <div class="mockup-header-bar">
+              <span class="mockup-back-arrow">←</span>
+              <span class="mockup-header-title">Preferences</span>
+              <span class="mockup-home-icon">⌂</span>
+            </div>
+            <div class="pref-toggle-row">
+              <span class="pref-toggle pref-toggle--active">✨ Guide Me</span>
+              <span class="pref-toggle">I Know My Macros</span>
+            </div>
+            <div class="pref-card">
+              <div class="pref-card-top">
+                <strong>Calorie Target</strong>
+                <span class="pref-card-badge">PER MEAL</span>
+              </div>
+              <p class="pref-card-sub">How many calories per restaurant meal?</p>
+              <div class="pref-cal-display"><span class="pref-cal-number">750</span> cal</div>
+              <div class="pref-slider">
+                <span>300</span>
+                <div class="pref-slider-track"><div class="pref-slider-fill" style="width: 30%"><span class="pref-slider-thumb"></span></div></div>
+                <span>1500</span>
+              </div>
+            </div>
+            <div class="pref-card">
+              <strong>Dietary Restrictions</strong>
+              <p class="pref-card-sub">These are hard filters — meals that don't match will be excluded.</p>
+              <div class="pref-chips">
+                <span class="pref-chip">Dairy-free</span>
+                <span class="pref-chip">Gluten-free</span>
+                <span class="pref-chip">Vegetarian</span>
+              </div>
+            </div>
+            <div class="pref-card">
+              <strong>Eating Goals</strong>
+              <p class="pref-card-sub">What are you aiming for?</p>
+              <div class="pref-chips">
+                <span class="pref-chip pref-chip--active">✓ High-protein</span>
+                <span class="pref-chip">High-fiber</span>
+                <span class="pref-chip">Low-calorie</span>
+                <span class="pref-chip pref-chip--active">✓ Low-carb</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: Pricing -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-heading text-center reveal-up">
+          Get started for free. <span class="text-accent">Upgrade when you're ready.</span>
+        </h2>
+        <div class="pricing-cards">
+          <div class="pricing-card reveal-up" data-delay="0">
+            <div class="pricing-card-header">
+              <h3 class="pricing-tier">Free</h3>
+              <div class="pricing-price">$0</div>
+              <p class="pricing-desc">Everything you need to start</p>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> Set your macro targets and dietary preferences</li>
+              <li><span class="check">✓</span> Browse scored meals from popular restaurants</li>
+              <li><span class="check">✓</span> Save your favorite meals for quick access</li>
+              <li><span class="check--limited">○</span> Limited map searches</li>
+              <li><span class="check--limited">○</span> Limited Smart Build uses</li>
+            </ul>
+            <a href="#download" class="btn btn--outline btn--full">Start Free</a>
+          </div>
+          <div class="pricing-card pricing-card--premium reveal-up" data-delay="200">
+            <div class="pricing-popular">Most Popular</div>
+            <div class="pricing-card-header">
+              <h3 class="pricing-tier">Premium</h3>
+              <div class="pricing-price">Pro</div>
+              <p class="pricing-desc">Unlock the full experience</p>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> Everything in Free, plus:</li>
+              <li><span class="check check--gold">✓</span> Unlimited map-based restaurant search</li>
+              <li><span class="check check--gold">✓</span> Unlimited Smart Build meal generation</li>
+              <li><span class="check check--gold">✓</span> Full access to off-menu custom meal hacks</li>
+              <li><span class="check check--gold">✓</span> Access to all interactive meal builders</li>
+            </ul>
+            <a href="#download" class="btn btn--primary btn--full">Go Premium</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: Final CTA -->
+    <section class="final-cta" id="download">
+      <div class="final-cta-bg">
+        <div class="final-cta-shape final-cta-shape--1"></div>
+        <div class="final-cta-shape final-cta-shape--2"></div>
+      </div>
+      <div class="container text-center">
+        <h2 class="final-cta-heading reveal-up">
+          Your macros. Your restaurants. <span class="text-accent">Your app.</span>
+        </h2>
+        <p class="final-cta-body reveal-up">
+          Download FitMeals and stop guessing what to order. Whether you're cutting, bulking, or just trying to eat smarter on the go — we've got your next meal covered.
+        </p>
+        <div class="final-cta-buttons reveal-up">
+          <a href="https://apps.apple.com/us/app/fit-meals-restaurant-macros/id6757499139" class="btn btn--white btn--lg store-btn">
+            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.mdmedia.fitmeals&hl=en_US" class="btn btn--outline-white btn--lg store-btn">
+            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M3.18 23.04L14.46 12 3.18.96c-.36.28-.58.7-.58 1.16v19.76c0 .46.22.88.58 1.16zm1.42.56l12.7-7.33-2.82-2.82L4.6 23.6zm14.06-8.2l3.1-1.79c.56-.32.56-1.1 0-1.42l-3.1-1.79-3.14 3.14 3.14 2.86zM4.6.4L15.48 10.45l2.82-2.82L5.6-.04 4.6.4z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="nav-logo-icon">FM</span>
+            <span class="nav-logo-text">FitMeals</span>
+          </div>
+          <p class="footer-tagline">Find restaurant meals that fit your macros.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.86 2.86 0 0 1 .84.13V9.01a6.27 6.27 0 0 0-1-.05A6.34 6.34 0 0 0 3 15.3a6.34 6.34 0 0 0 6.33 6.34A6.34 6.34 0 0 0 15.66 15.3V8.73a8.19 8.19 0 0 0 4.78 1.52V6.79a4.85 4.85 0 0 1-.85-.1z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Product</h4>
+          <a href="/#howItWorks" class="footer-link">How It Works</a>
+          <a href="/#smartBuild" class="footer-link">Smart Build</a>
+          <a href="/#pricing" class="footer-link">Pricing</a>
+          <a href="/support.html" class="footer-link">Support</a>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Legal</h4>
+          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="/terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
+          <a href="/cookie-policy.html" class="footer-link">Cookie Policy</a>
+          <a href="/delete-account.html" class="footer-link">Delete Account</a>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Contact</h4>
+          <a href="mailto:dan@fitmeals.app" class="footer-link">dan@fitmeals.app</a>
+          <div class="footer-download">
+            <a href="https://apps.apple.com/us/app/fit-meals-restaurant-macros/id6757499139" class="btn btn--primary btn--sm">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.mdmedia.fitmeals&hl=en_US" class="btn btn--outline btn--sm">Google Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Fit Meals. A product of MD Media LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
