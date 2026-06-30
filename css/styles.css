@@ -429,6 +429,12 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 
+.hero-trial-note {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
 .hero-scroll-indicator {
   position: absolute;
   bottom: 30px;
@@ -2084,12 +2090,33 @@ h1, h2, h3, h4 {
   background: var(--color-bg);
 }
 
+.pricing-intro {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-top: 12px;
+}
+
 .pricing-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   max-width: 800px;
-  margin: 50px auto 0;
+  margin: 40px auto 0;
+}
+
+.pricing-price-suffix {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.pricing-terms {
+  max-width: 800px;
+  margin: 28px auto 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 .pricing-card {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FitMeals — Find Restaurant Meals That Fit Your Macros</title>
-  <meta name="description" content="FitMeals helps you find restaurant meals that fit your macros. Scored to your personal targets, not generic healthy labels. Download free on iOS and Android.">
+  <meta name="description" content="FitMeals helps you find restaurant meals that fit your macros. Scored to your personal targets, not generic healthy labels. Available on iOS and Android.">
   <meta property="og:title" content="FitMeals — Stop Guessing. Start Eating Smarter at Restaurants.">
   <meta property="og:description" content="Find restaurant meals that actually fit your goals — scored to your personal targets.">
   <meta property="og:type" content="website">
@@ -31,7 +31,7 @@
         <a href="/support.html" class="nav-link">Support</a>
         <a href="#pricing" class="nav-link">Pricing</a>
       </nav>
-      <a href="#download" class="nav-cta btn btn--primary btn--sm">Download Free</a>
+      <a href="#download" class="nav-cta btn btn--primary btn--sm">Download</a>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -71,6 +71,7 @@
               Google Play
             </a>
           </div>
+          <p class="hero-trial-note animate-on-load" data-delay="1000">Try free for 7 days with an annual plan — then just $24.99/yr. Cancel anytime.</p>
         </div>
         <div class="hero-visual animate-on-load" data-delay="500">
           <div class="hero-phone">
@@ -214,8 +215,8 @@
           <div class="step reveal-up" data-delay="200">
             <div class="step-number"><span>2</span></div>
             <div class="step-icon">🍽️</div>
-            <h3 class="step-title">Find meals that fit</h3>
-            <p class="step-body">Browse scored meals from popular restaurants, or open the map to find options near you. Every meal is scored against your personal goals so the best options rise to the top.</p>
+            <h3 class="step-title">See your matches</h3>
+            <p class="step-body">Open your Matches list to see meals nearby that fit your goals, explore the map, or build your own. Every option is scored against your personal targets so the best ones rise to the top.</p>
           </div>
           <div class="step-connector reveal-up" data-delay="300">
             <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h50m-8-8l8 8-8 8" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -225,6 +226,85 @@
             <div class="step-icon">✅</div>
             <h3 class="step-title">Order with confidence</h3>
             <p class="step-body">Found your meal? Save it for next time. Walk in, order exactly what's on the screen, and stay on track without thinking twice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4.5: Matches Near You -->
+    <section class="feature feature--matches feature--reverse" id="matches">
+      <div class="container feature-grid">
+        <div class="feature-content reveal-right">
+          <div class="feature-label">New in v2.0</div>
+          <h2 class="section-heading">
+            Your matches, <span class="text-accent">all in one list.</span>
+          </h2>
+          <p class="feature-body">
+            Open your Matches page to see a ready-made list of meals nearby that fit your goals — no scrolling through menus, no guesswork. Every match is scored to your personal targets and sorted best-first.
+          </p>
+          <p class="feature-highlight">
+            One list. Smart-built meals and real menu options side by side — ranked by how well they fit you.
+          </p>
+          <p class="feature-body">
+            It pulls from FitMeals' full database of coach-built meals <em>and</em> auto-generates Smart Build options at the restaurants around you, so there's always something that fits.
+          </p>
+        </div>
+        <div class="feature-visual reveal-left">
+          <div class="feature-mockup feature-mockup--scoring">
+            <div class="mockup-header-bar">
+              <span class="mockup-back-arrow">←</span>
+              <span class="mockup-header-title">Matches near you</span>
+              <span class="mockup-home-icon">⚙</span>
+            </div>
+            <div class="scr-tabs">
+              <span class="scr-tab scr-tab--active">All</span>
+              <span class="scr-tab">Smart Build</span>
+              <span class="scr-tab">On the menu</span>
+            </div>
+            <div class="scr-meal-cards">
+              <div class="scr-meal-card">
+                <div class="scr-meal-img" style="background: #e8e0d0">✨</div>
+                <div class="scr-meal-info">
+                  <div class="scr-meal-top">
+                    <span class="scr-restaurant-tag">Chipotle · Smart Build</span>
+                    <span class="scr-match">98% match</span>
+                  </div>
+                  <strong class="scr-meal-name">Smart-Built Double Chicken Bowl</strong>
+                  <div class="scr-segmented-bar">
+                    <div class="scr-seg scr-seg--protein" style="width:48%"></div>
+                    <div class="scr-seg scr-seg--carb" style="width:30%"></div>
+                    <div class="scr-seg scr-seg--fat" style="width:22%"></div>
+                  </div>
+                  <div class="scr-macro-nums">
+                    <span><strong>710</strong> Cals</span>
+                    <span style="color:#2e7d32"><strong>62g</strong> Protein</span>
+                    <span style="color:#f59e0b"><strong>54g</strong> Carb</span>
+                    <span style="color:#a03bea"><strong>24g</strong> Fat</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scr-meal-card">
+                <div class="scr-meal-img" style="background: #d8e8d0">🥗</div>
+                <div class="scr-meal-info">
+                  <div class="scr-meal-top">
+                    <span class="scr-restaurant-tag">Cava</span>
+                    <span class="scr-match">94% match</span>
+                  </div>
+                  <strong class="scr-meal-name">Greens + Grains Bowl, Grilled Ch...</strong>
+                  <div class="scr-segmented-bar">
+                    <div class="scr-seg scr-seg--protein" style="width:42%"></div>
+                    <div class="scr-seg scr-seg--carb" style="width:35%"></div>
+                    <div class="scr-seg scr-seg--fat" style="width:23%"></div>
+                  </div>
+                  <div class="scr-macro-nums">
+                    <span><strong>560</strong> Cals</span>
+                    <span style="color:#2e7d32"><strong>48g</strong> Protein</span>
+                    <span style="color:#f59e0b"><strong>45g</strong> Carb</span>
+                    <span style="color:#a03bea"><strong>20g</strong> Fat</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -323,6 +403,9 @@
           </p>
           <p class="feature-highlight">
             It's like building your meal in the app before you even walk in the door.
+          </p>
+          <p class="feature-body">
+            Make it yours: add <strong>your own meal photos</strong> to personalize your builder meals, then <strong>share a meal card</strong> with friends or to social with a tap.
           </p>
           <div class="feature-restaurants">
             <span class="restaurant-tag">Chipotle</span>
@@ -502,7 +585,7 @@
             Find meals that fit your goals — <span class="text-accent">near you.</span>
           </h2>
           <p class="feature-body">
-            Open the map, see restaurants around you, and instantly browse meals that match your targets — sorted by score, not guesswork.
+            Open the map, see restaurants around you, and instantly browse meals that match your targets — sorted by score, not guesswork. FitMeals even drops <strong>smart-built meals right on the map</strong>, auto-built for your goals at the restaurants nearby.
           </p>
           <p class="feature-body">
             Whether you're traveling, running errands, or just don't feel like cooking, FitMeals helps you find the best option nearby in seconds.
@@ -652,41 +735,46 @@
     <section class="pricing" id="pricing">
       <div class="container">
         <h2 class="section-heading text-center reveal-up">
-          Get started for free. <span class="text-accent">Upgrade when you're ready.</span>
+          Start your 7-day free trial. <span class="text-accent">Then less than a coffee a month.</span>
         </h2>
+        <p class="pricing-intro text-center reveal-up">One plan. Every feature. Cancel anytime.</p>
         <div class="pricing-cards">
-          <div class="pricing-card reveal-up" data-delay="0">
+          <div class="pricing-card pricing-card--premium reveal-up" data-delay="0">
+            <div class="pricing-popular">Best Value · Free Trial</div>
             <div class="pricing-card-header">
-              <h3 class="pricing-tier">Free</h3>
-              <div class="pricing-price">$0</div>
-              <p class="pricing-desc">Everything you need to start</p>
+              <h3 class="pricing-tier">Annual</h3>
+              <div class="pricing-price">$24.99<span class="pricing-price-suffix">/yr</span></div>
+              <p class="pricing-desc">Just $2.08/mo, billed yearly</p>
             </div>
             <ul class="pricing-features">
-              <li><span class="check">✓</span> Set your nutrition targets and dietary preferences</li>
-              <li><span class="check">✓</span> Browse scored meals from popular restaurants</li>
-              <li><span class="check">✓</span> Save your favorite meals for quick access</li>
-              <li><span class="check--limited">○</span> Limited map searches</li>
-              <li><span class="check--limited">○</span> Limited Smart Build uses</li>
+              <li><span class="check check--gold">✓</span> 7-day free trial, then $24.99/year</li>
+              <li><span class="check check--gold">✓</span> Your Matches list — meals nearby that fit your goals</li>
+              <li><span class="check check--gold">✓</span> Unlimited Smart Build &amp; smart-built meals on the map</li>
+              <li><span class="check check--gold">✓</span> All interactive meal builders &amp; off-menu hacks</li>
+              <li><span class="check check--gold">✓</span> Your own meal photos &amp; shareable meal cards</li>
+              <li><span class="check check--gold">✓</span> Cancel anytime</li>
             </ul>
-            <a href="#download" class="btn btn--outline btn--full">Start Free</a>
+            <a href="#download" class="btn btn--primary btn--full">Download</a>
           </div>
-          <div class="pricing-card pricing-card--premium reveal-up" data-delay="200">
-            <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-card reveal-up" data-delay="200">
             <div class="pricing-card-header">
-              <h3 class="pricing-tier">Premium</h3>
-              <div class="pricing-price">Pro</div>
-              <p class="pricing-desc">Unlock the full experience</p>
+              <h3 class="pricing-tier">Monthly</h3>
+              <div class="pricing-price">$4.99<span class="pricing-price-suffix">/mo</span></div>
+              <p class="pricing-desc">Billed monthly · no free trial</p>
             </div>
             <ul class="pricing-features">
-              <li><span class="check">✓</span> Everything in Free, plus:</li>
-              <li><span class="check check--gold">✓</span> Unlimited map-based restaurant search</li>
-              <li><span class="check check--gold">✓</span> Unlimited Smart Build meal generation</li>
-              <li><span class="check check--gold">✓</span> Full access to off-menu custom meal hacks</li>
-              <li><span class="check check--gold">✓</span> Access to all interactive meal builders</li>
+              <li><span class="check">✓</span> Full access to every feature</li>
+              <li><span class="check">✓</span> Your Matches list — meals nearby that fit your goals</li>
+              <li><span class="check">✓</span> Unlimited Smart Build &amp; smart-built meals on the map</li>
+              <li><span class="check">✓</span> All interactive meal builders &amp; off-menu hacks</li>
+              <li><span class="check">✓</span> Cancel anytime</li>
             </ul>
-            <a href="#download" class="btn btn--primary btn--full">Go Premium</a>
+            <a href="#download" class="btn btn--outline btn--full">Download</a>
           </div>
         </div>
+        <p class="pricing-terms">
+          FitMeals is an auto-renewing subscription. The 7-day free trial applies to the annual plan only; after the trial, your account is charged $24.99/year unless canceled at least 24 hours before the trial ends. The monthly plan is $4.99/month with no free trial. Subscriptions renew automatically until canceled. Manage or cancel anytime in your App Store or Google Play account settings.
+        </p>
       </div>
     </section>
 
@@ -736,6 +824,7 @@
         <div class="footer-links-group">
           <h4 class="footer-heading">Product</h4>
           <a href="/#howItWorks" class="footer-link">How It Works</a>
+          <a href="/#matches" class="footer-link">Matches</a>
           <a href="/#smartBuild" class="footer-link">Smart Build</a>
           <a href="/#pricing" class="footer-link">Pricing</a>
           <a href="/support.html" class="footer-link">Support</a>
