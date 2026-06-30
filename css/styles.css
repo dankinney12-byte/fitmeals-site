@@ -1279,6 +1279,17 @@ h1, h2, h3, h4 {
   font-size: 0.6rem;
   font-weight: 600;
 }
+.scr-built-badge {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: rgba(45, 90, 61, 0.1);
+  border: 1px solid var(--color-primary-light);
+}
 .scr-meal-name {
   font-size: 0.8rem;
   display: block;
@@ -1588,6 +1599,67 @@ h1, h2, h3, h4 {
   background: var(--color-primary);
   color: white;
   border-color: var(--color-primary);
+}
+.pref-card-note {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+.pref-goal-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.pref-goal-row--active {
+  border-color: var(--color-primary);
+  background: rgba(45, 90, 61, 0.04);
+}
+.pref-goal-check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.pref-goal-check--empty {
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+}
+.pref-goal-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pref-goal-info strong {
+  font-size: 0.82rem;
+}
+.pref-goal-desc {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+.pref-goal-learn {
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  margin-top: 1px;
 }
 
 /* Legacy mockup styles kept for compatibility */
